@@ -1,0 +1,12 @@
+[Unit]
+Description=My first daemon!
+[Service]
+User=user
+WorkingDirectory=/home/ubuntu/mydaemon
+ExecStart=/home/ubuntu/mydaemon/executable
+Type=simple
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=multi-user.target
